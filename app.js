@@ -11,7 +11,7 @@ const bodyparser = require("body-parser");//in this case body-parser is not ness
 //mongoose
 mongoose.connect('mongodb://localhost/contactDance', {useNewUrlParser: true, useUnifiedTopology: true});
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 //DEFINE MONGOOSE SCHEMA
 const contactSchema = new mongoose.Schema({
